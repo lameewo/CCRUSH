@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100dvw;
+  height: 100vh;
+  display: flex;
+}
+.tablecont{
+  top: 50%;
+  right: 40%;
+}
+#myTable {
+  position: absolute;
+  top: 10%;
+  right: 42%;
+  height: 320px;
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 1%;
+  margin: 10% auto;
+}
+td {
+  text-align: center;
+  height: 37px;
+  width: 37px;
+  margin: 2px;
+  border: solid 2px;
+  border-radius: 5%;
+}
+
+.grid div {
+  outline: black;
+  width: 11%;
+  height: 10%;
+  border-radius: 7%;
+  background-color: pink;
+  margin: 0.6%;
+}
+
+.ngpart {
+  width: 25%;
+}
+.board {
+  width: 50%;
+}
+.ngbcontainer {
+  text-align: center;
+  height: 50%;
+}
+.titlecontainer {
+  text-align: center;
+  height: 50%;
+  position: relative;
+}
+#clickMe {
+  background-color: pink;
+  font-weight: bold;
+  font-size: 200%;
+  border-radius: 25px;
+  width: 60%;
+  height: 40%;
+}
+h1 {
+  font-size: 300%;
+  color: #800000;
+  position: absolute;
+  bottom: 10%;
+  right: 20%;
+}
+.controls{
+  width: 25%;
+  height: 100%;
+}
+.movimiento {
+  
+  height: 30%;
+}
+.movers {
+  font-size: xx-large;
+  position: absolute;
+  left: 85%;
+  bottom: 80%;
+}
+#move {
+  position: absolute;
+  left: 90%;
+  bottom: 80%;
+  height: 50px;
+  width: 70px;
+}
+.arrows {
+  height: 30%;
+  
+}
+
+#up{
+  position: absolute;
+  left: 87%;
+  top: 32%;
+  height: 60px;
+  width: 60px;
+  border-radius: 15%;
+}
+#left{
+  position: absolute;
+  left: 82%;
+  top: 40%;
+  height: 60px;
+  width: 60px;
+  border-radius: 15%;
+}
+#right{
+  position: absolute;
+  left: 92%;
+  top: 40%;
+  height: 60px;
+  width: 60px;
+  border-radius: 15%;
+}
+#down{
+  position: absolute;
+  left: 87%;
+  top: 49%;
+  height: 60px;
+  width: 60px;
+  border-radius: 15%;
+}
+.buttonCrush {
+  text-align: center;
+  height: 50%;
+  width: 100% ;
+}
+#crush {
+  background-color: pink;
+  font-weight: bold;
+  font-size: 200%;
+  border-radius: 25px;
+  width: 200px;
+  height: 100px;
+}

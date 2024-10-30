@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CandyCrush</title>
+    <link rel="stylesheet" href="./ccs.css" />
+  </head>
+  <body>
+    <div class="ngpart">
+      <div class="titlecontainer">
+        <h1>Candy Crush</h1>
+      </div>
+      <div class="ngbcontainer">
+        <input
+          id="clickMe"
+          type="button"
+          value="New Game"
+          onclick="weeset();"
+        />
+      </div>
+    </div>
+    <div class="board">
+      <div class="tablecont">
+      <table id="myTable"></table>
+      </div>
+    </div>
+    <div class="controls">
+      <div class="movimiento">
+        <span class="movers">Move:</span>
+        <input type="text" id="move" name="move" onchange="validateMove()" />
+      </div>
+      <div class="arrows">
+      <input id="up" type="button" value="↑" onclick="uppies();"/><br>
+      <input id="left" type="button" value="←" onclick="lefties();"/>
+      <input id="right" type="button" value="→" onclick="righties();"/><br>
+      <input id="down" type="button" value="↓" onclick="downies();"/>
+      </div>
+      <div class="buttonCrush">
+        <input id="crush" type="button" value="Crush Once" onclick="crush();"/>
+      </div>
+    </div>
+    <script src="./jscript.js"></script>
+  </body>
+</html>
