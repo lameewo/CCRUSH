@@ -52,40 +52,34 @@ function validateMove() {
   document.getElementById("left").disabled = true;
   document.getElementById("right").disabled = true;
   document.getElementById("down").disabled = true;
+
   var casilla = document.getElementById('move').value;
-  var moveUp = casilla.charCodeAt(1);
-  var moveDown = casilla.charCodeAt(1);
-  var moveLeft = casilla.charCodeAt(0);
-  var moveRight = casilla.charCodeAt(0);
-  if (57 > moveUp > 49){
-    document.getElementById("up").disabled = false;
-  }
-  if (48 < moveDown < 56){
-    document.getElementById("down").disabled = false;
-  }
-  if (moveLeft > 97){
+  var moveVertical = casilla.charCodeAt(1);
+  var moveHorizontal = casilla.charCodeAt(0);
+
+
+if (moveVertical > 49){
+        document.getElementById("up").disabled = false;
+   }
+  if (moveVertical < 56){
+      document.getElementById("down").disabled = false;
+    }
+  if (moveHorizontal > 97){
     document.getElementById("left").disabled = false;
   }
-  if (moveRight < 104){
+  if (moveHorizontal < 104){
     document.getElementById("right").disabled = false;
   }
+
+  if(casilla == null || 49 > moveVertical || moveVertical > 56 || 96 > moveHorizontal || moveHorizontal > 105){
+  document.getElementById("up").disabled = true;
+  document.getElementById("left").disabled = true;
+  document.getElementById("right").disabled = true;
+  document.getElementById("down").disabled = true;
+  }
+
   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function weeset() {
   location.reload()
