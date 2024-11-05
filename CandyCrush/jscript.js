@@ -54,9 +54,11 @@ function validateMove() {
   document.getElementById("down").disabled = true;
 
   var casilla = document.getElementById('move').value;
+  var moveVertical = 0;
+  var moveHorizontal = 0
   var moveVertical = casilla.charCodeAt(1);
   var moveHorizontal = casilla.charCodeAt(0);
-
+  alert(moveVertical);
 
 if (moveVertical > 49){
         document.getElementById("up").disabled = false;
@@ -71,7 +73,7 @@ if (moveVertical > 49){
     document.getElementById("right").disabled = false;
   }
 
-  if(casilla == null || 49 > moveVertical || moveVertical > 56 || 96 > moveHorizontal || moveHorizontal > 105){
+  if(casilla == null || moveVertical == 0 || 49 > moveVertical || moveVertical > 56 || 96 > moveHorizontal || moveHorizontal > 105){
   document.getElementById("up").disabled = true;
   document.getElementById("left").disabled = true;
   document.getElementById("right").disabled = true;
