@@ -24,6 +24,13 @@
 <div class="right-side">
     <div class="title">
         <h3>Move</h3>
+        <input type="text" id="moveInput" name="move" oninput="checkMove()" >
+    </div>
+    <div class="arrows">
+        <button  id="upArrow" value="UP" onclick="moveUp()"></button> <br>
+        <button  id="leftArrow" value="LEFT" onclick="moveLeft()"></button>
+        <button  id="rightArrow" value="RIGHT" onclick="moveRight()"></button> <br>
+        <button  id="downArrow" value="DOWN" onclick="moveDown()"></button>
     </div>
     <div class="button">
         <button id="crush" onclick="crushing"></button>

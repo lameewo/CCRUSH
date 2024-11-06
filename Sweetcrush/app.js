@@ -18,7 +18,6 @@ const candyColors = [
 function createBoard() {
   for (let i = 0; i < width*width; i++) {
     const square = document.createElement('div')
-    square.setAttribute('draggable', true)
     square.setAttribute('id', i)
     let randomColor = Math.floor(Math.random() * candyColors.length)
     square.style.backgroundColor = candyColors[randomColor]
@@ -28,18 +27,52 @@ function createBoard() {
 }
 createBoard()
 
-// Dragging the Candy
-let colorBeingDragged
+//ID translation
+for (let x = 0; x < width*width; x++){
+for(let y = 0; y < width; y++){
+let temporalSquare = document.getElementById(y + (x * width))
+temporalSquare.innerHTML = String.fromCharCode(97 + y) + (x + 1)
+}
+}
+
+
+//Arrows
+document.getElementById("upArrow").disabled = true;
+document.getElementById("leftArrow").disabled = true;
+document.getElementById("rightArrow").disabled = true;
+document.getElementById("downArrow").disabled = true;
+
+//Reading the input
+function checkMove(){
+var rawMove = document.getElementById("moveInput").value;
+var lcMove = rawMove.toLowerCase();
+var moveSpan = lcMove.length;
+
+//Activate and deactivate Buttons
+function theButtoning(){
+
+
+
+//Disabling all buttons
+if (moveSpan != 2){
+}
+}
+}
+
+// Changing the Candy
+let colorBeingTargeted
 let colorBeingReplaced
-let squareIdBeingDragged
+let squareIdBeingTargeted
 let squareIdBeingReplaced
 
-squares.forEach(square => square.addEventListener('dragstart', dragStart))
-squares.forEach(square => square.addEventListener('dragend', dragEnd))
-squares.forEach(square => square.addEventListener('dragover', dragOver))
-squares.forEach(square => square.addEventListener('dragenter', dragEnter))
-squares.forEach(square => square.addEventListener('drageleave', dragLeave))
-squares.forEach(square => square.addEventListener('drop', dragDrop))
+function moveUp(){}
+function moveLeft(){}
+function moveRight(){}
+function moveDown(){}
+
+
+
+
 
 function dragStart(){
     colorBeingDragged = this.style.backgroundColor
