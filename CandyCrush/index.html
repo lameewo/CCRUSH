@@ -32,11 +32,16 @@
         <input type="text" id="move" name="move" onchange="validateMove()" />
       </div>
       <div class="arrows">
-      <input id="up" type="button" value="↑" onclick="uppies();"/><br>
-      <input id="left" type="button" value="←" onclick="lefties();"/>
-      <input id="right" type="button" value="→" onclick="righties();"/><br>
-      <input id="down" type="button" value="↓" onclick="downies();"/>
-      </div>
+        <div class="arrCont">
+          <input id="up" type="button" value="↑" onclick="uppies();"/>
+        </div>
+        <div class="arrCont">
+          <input id="left" type="button" value="←" onclick="lefties();"/>
+          <input id="right" type="button" value="→" onclick="righties();"/>
+        </div>
+        <div class="arrCont">
+            <input id="down" type="button" value="↓" onclick="downies();"/>
+        </div>
       <div class="buttonCrush">
         <input id="crush" type="button" value="Crush Once" onclick="crush();"/>
       </div>

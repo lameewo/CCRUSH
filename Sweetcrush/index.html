@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Candy Crush</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js" charset="utf-8"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
 </head>
 <body>
 <div class="left-side">
@@ -12,8 +12,8 @@
         <h3>score</h3>
         <h1 id="score"></h1>
     </div>
-    <div class="button">
-        <button id="ng_button" onclick="resetBoard"></button>
+    <div class="ngbSection">
+        <input type="button" id="ng_button" value="New Game" onclick="resetBoard();"/>
     </div>
 </div>
 
@@ -22,20 +22,26 @@
 </div>
 
 <div class="right-side">
-    <div class="title">
-        <h3>Move</h3>
-        <input type="text" id="moveInput" name="move" oninput="checkMove()" >
+    <div class="moveSection">
+        <h3>Move</h3><br>
+        <input type="text" id="moveInput" name="move" oninput="checkMove();" >
     </div>
     <div class="arrows">
-        <button  id="upArrow" value="UP" onclick="moveUp()"></button> <br>
-        <button  id="leftArrow" value="LEFT" onclick="moveLeft()"></button>
-        <button  id="rightArrow" value="RIGHT" onclick="moveRight()"></button> <br>
-        <button  id="downArrow" value="DOWN" onclick="moveDown()"></button>
+        <div class="arrCont">
+            <input id="up" class="arrow" type="button" value="↑" onclick="moveUp();" />
+        </div>
+        <div class="arrCont">
+            <input id="left" class="arrow" type="button" value="←" onclick="moveLeft();" />
+            <input id="right" class="arrow" type="button" value="→" onclick="moveRight();" />
+        </div>
+        <div class="arrCont">
+            <input id="down" class="arrow" type="button" value="↓" onclick="moveDown();" />
+        </div>
     </div>
-    <div class="button">
-        <button id="crush" onclick="crushing"></button>
+    <div class="crushButton">
+        <button id="crush" onclick="crushAll();"></button>
     </div>
 </div>
-
+<script src="app.js"></script>
 </body>
 </html>
