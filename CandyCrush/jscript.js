@@ -41,7 +41,7 @@ for (var x = 0; x < cells.length; x++){
   cells[x].id = String.fromCharCode(97 + (x - 48)) + 7;
   }else if (x < 64){
   cells[x].id = String.fromCharCode(97 + (x - 56)) + 8;
-  }}
+ }}
   document.getElementById("up").disabled = true;
   document.getElementById("left").disabled = true;
   document.getElementById("right").disabled = true;
@@ -55,22 +55,22 @@ function validateMove() {
 
   var casilla = document.getElementById('move').value;
   var moveVertical = 0;
-  var moveHorizontal = 0
+  var moveHorizontal = 0;
   var moveVertical = casilla.charCodeAt(1);
   var moveHorizontal = casilla.charCodeAt(0);
 
 if (moveVertical > 49){
         document.getElementById("up").disabled = false;
-   }
-  if (moveVertical < 56){
+}
+if (moveVertical < 56){
       document.getElementById("down").disabled = false;
-    }
-  if (moveHorizontal > 97){
+}
+if (moveHorizontal > 97){
     document.getElementById("left").disabled = false;
-  }
-  if (moveHorizontal < 104){
+}
+if (moveHorizontal < 104){
     document.getElementById("right").disabled = false;
-  }
+}
 
   if(casilla == null || moveVertical == 0 || 49 > moveVertical || moveVertical > 56 || 96 > moveHorizontal || moveHorizontal > 105 || casilla.length != 2){
   document.getElementById("up").disabled = true;
