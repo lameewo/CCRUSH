@@ -1,0 +1,30 @@
+legend{
+color: blue;
+font-weight: bold;
+font-size: 22px;
+}
+h1{
+color: blue;
+font-weight: bold;
+}
+ul{
+font-weight: bold;
+font-size: 18px;
+}
+select{
+width: 200px;
+}
+.grid {
+    height: 180px;
+    width: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    padding:5px;
+}
+.numOnPad{
+margin: 1px;
+    height: 36px;
+    width: 36px;
+    border: solid 1px;
+    border-color: black;
+}

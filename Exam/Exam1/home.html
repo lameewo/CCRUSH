@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor</title>
+    <title>CandyCrush</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body onload="test()">
+<h1>Conversor</h1>
+<div class="baseOrigenCont">
+    <fieldset> <legend>1. Base Origen</legend>
+    <span>Seleccionar la base origen</span>
+    <ul>
+        <input type="radio" value="binario" name="tiposBase" onchange="lock1()"><span>Binario</span><br>
+        <input type="radio" value="octal" name="tiposBase" onchange="lock1()"><span>Octal</span><br>
+        <input type="radio" value="decimal" name="tiposBase" onchange="lock1()"><span>Decimal</span><br>
+        <input type="radio" value="hexadecimal" name="tiposBase" onchange="lock1()"><span>Hexadecimal</span><br>
+    </ul>
+    </fieldset>
+</div>
+<div class="numeroOrigenCont">
+    <fieldset> <legend>1. Numero Origen</legend>
+    <span>Introduce el numero origen mediante el teclado y pulse el boton Aceptar</span>
+    <input type="text" id="numDisplay" disabled>
+        <div class="grid"></div>
+    <input type="button" id="aceptarBtn" value="Aceptar" onclick="aceptar();">
+    </fieldset>
+</div>
+<div class="baseDestinoCont">
+    <fieldset> <legend>3. Base Destino</legend>
+        <span>Seleccionar la base destino de la lista plegable</span>
+        <select name="baseDestino" id="basesDest" >
+            <option value="binario">Binario</option>
+            <option value="octal">Octal</option>
+            <option value="decimal">Decimal</option>
+            <option value="hexadecimal">Hexadecimal</option>
+        </select>
+    </fieldset>
+
+</div>
+<div class="numeroDestinoCont">
+    <fieldset> <legend>4. Numero Destino</legend>
+        <span>El numero destino es:</span>
+        <input type="text" id="resultDisplay" disabled>
+    </fieldset>
+</div>
+<script src="script.js"></script>
+<script src="convertirBase.js">
+</script>
+</body>
+</html>
